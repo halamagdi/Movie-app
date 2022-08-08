@@ -1,0 +1,50 @@
+<app-header [headerTreandingMovies]="trendingMovies"></app-header>
+<div class="container">
+<div class="row my-3">
+    <div class="col-md-4">
+        <div class="brdr my-5 w-25"></div>
+        <h2>Trending Movies <br> To Watch Right Now</h2>
+        <p class="second-color">Now Watching Movies By Days</p>
+        <div class="brdr my-5 w-100"></div>
+
+    </div>
+    <div *ngFor='let movie of trendingMovies' class="col-md-2 position-relative">
+        <div class="movie">
+            <a [routerLink]="['/moviedetails' , movie.id] ">
+
+                <img class="w-100 py-3" [src]="imgPerfix + movie.poster_path" alt="">
+                <h3 class="h5 text-center my-2">{{movie.title}}</h3>
+                <div class="vote position-absolute end-0 top-0 mt-3 me-3">
+                    {{movie.vote_average}}
+                </div>
+            </a>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row my-5">
+    <div class="col-md-4">
+        <div class="brdr my-5 w-25"></div>
+        <h2>Trending Tv <br> To Watch Right Now</h2>
+        <p class="second-color">Now Watching Tv Shows By Days</p>
+        <div class="brdr my-5 w-100"></div>
+
+    </div>
+    <div *ngFor='let tv of trendingTv' class="col-md-2 position-relative">
+        <div class="tv">
+            <a [routerLink]="['/tvDetails' , tv.id]">
+                <img class="w-100 py-3" [src]="imgPerfix + tv.poster_path" alt="">
+                <h3 class="h5 text-center my-2">{{tv.name}}</h3>
+                <div class="vote position-absolute end-0 top-0 mt-3 me-3">
+                    {{tv.vote_average}}
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+</div>

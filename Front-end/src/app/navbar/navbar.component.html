@@ -1,0 +1,21 @@
+<nav class=" d-flex align-items-center justify-content-between fixed-top color">
+    <ul class="list-unstyled d-flex px-3 my-3">
+        <li *ngIf="isLogin" class="px-2"><a routerLink="home">Home</a> </li>
+        <li *ngIf="isLogin" class="px-2"><a routerLink="about">About Us</a> </li>
+        <li *ngIf="isLogin" class="px-2"><a routerLink="contact">Contacts</a> </li>
+
+    </ul>
+
+    <ul class="list-unstyled d-flex px-3 my-3">
+        <li class="px-2"><a><i class="fab fa-facebook"></i></a></li>
+        <li class="px-2"><a><i class="fab fa-instagram"></i></a></li>
+        <li class="px-2"><a><i class="fab fa-twitter"></i></a> </li>
+        <li class="px-2 me-4"><a><i class="fab fa-youtube"></i></a> </li>
+
+
+        <li *ngIf="!isLogin" class="px-2"><a routerLink="login">Login</a></li>
+        <li *ngIf="!isLogin" class="px-2"><a routerLink="register">Register</a></li>
+        <li (click)="logOut()" *ngIf="isLogin" class="px-2"><a routerLink="">Logout</a> </li>
+
+    </ul>
+</nav>

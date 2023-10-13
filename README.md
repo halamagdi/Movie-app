@@ -12,7 +12,7 @@ To set up and run the Movie Web Application locally, follow these steps:
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/movie-web-application.git
+git clone https://github.com/halamagdi/movie-web-application.git
 ```
 
 2. Install dependencies:
@@ -51,9 +51,6 @@ The Movie Web Application is open-source software licensed under the [MIT Licens
 - [Angular](https://angular.io/)
 - [MovieDB API](https://www.themoviedb.org/documentation/api)
 
-## Contact
-
-For any inquiries or questions, please contact [your-email@example.com](mailto:your-email@example.com).
 
 ---
 
